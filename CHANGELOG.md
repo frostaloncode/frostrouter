@@ -1,3 +1,6 @@
+## 0.9.1
+* FIXED error
+
 ## 0.9.0
 
 * The page now redirects.
