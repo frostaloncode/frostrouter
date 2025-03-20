@@ -3,10 +3,9 @@ import 'package:frostrouter/src/components/extensionroute.dart';
 import 'package:frostrouter/src/router/frostrouterconfig.dart';
 import 'package:frostrouter/src/router/frostrouterdelegate.dart';
 
-class FrostRoute 
-{
+class FrostRoute {
   /// Version 0.9.1
-  
+
   /// Page Info Class
   FrostRoute({
     required String name,
