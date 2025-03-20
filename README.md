@@ -1,6 +1,6 @@
 
 
-![frostrouter Banner](https://raw.githubusercontent.com/frostaloncode/frostrouter/refs/heads/main/images/banner.png)
+![frostrouter Banner](https://raw.githubusercontent.com/frostaloncode/frostrouter/refs/heads/main/images/banner.png?token=GHSAT0AAAAAADAR44P4IESSLNVG6R77FLZKZ633RIA)
 
 # Developers
 * Sinan UYĞUN - Developer 
