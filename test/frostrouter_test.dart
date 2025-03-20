@@ -66,7 +66,7 @@ void main() {
           name: 'Profile',
           path: '/profile',
           builder: (context) => Text('Profile Page'),
-        )
+        ),
       ];
       frostRouter.setRouters = newRoutes;
 
@@ -74,12 +74,15 @@ void main() {
       expect(frostRouter.route.first.name, 'Profile');
     });
 
-    testWidgets('FrostRouter navigation functions should execute without errors', (WidgetTester tester) async {
-      expect(() => frostRouter.frostRoutePath('/dashboard'), returnsNormally);
-      expect(() => frostRouter.frostRouteReturn(), returnsNormally);
-      expect(() => frostRouter.frostRoutePop(), returnsNormally);
-      expect(() => frostRouter.frostRouteName('Home'), returnsNormally);
-    });
+    testWidgets(
+      'FrostRouter navigation functions should execute without errors',
+      (WidgetTester tester) async {
+        expect(() => frostRouter.frostRoutePath('/dashboard'), returnsNormally);
+        expect(() => frostRouter.frostRouteReturn(), returnsNormally);
+        expect(() => frostRouter.frostRoutePop(), returnsNormally);
+        expect(() => frostRouter.frostRouteName('Home'), returnsNormally);
+      },
+    );
   });
 
   group('FrostRouterDelegate Tests', () {
@@ -100,7 +103,9 @@ void main() {
       ]);
     });
 
-    testWidgets('FrostRouterDelegate should change route path correctly', (WidgetTester tester) async {
+    testWidgets('FrostRouterDelegate should change route path correctly', (
+      WidgetTester tester,
+    ) async {
       await delegate.setNewRoutePath('/dashboard');
       expect(delegate.currentConfiguration, '/dashboard');
 
@@ -108,13 +113,17 @@ void main() {
       expect(delegate.currentConfiguration, '/');
     });
 
-    testWidgets('FrostRouterDelegate should revert to old route path', (WidgetTester tester) async {
+    testWidgets('FrostRouterDelegate should revert to old route path', (
+      WidgetTester tester,
+    ) async {
       await delegate.setNewRoutePath('/dashboard');
       delegate.setOldRoutePath();
       expect(delegate.currentConfiguration, '/');
     });
 
-    testWidgets('FrostRouterDelegate should handle pop correctly', (WidgetTester tester) async {
+    testWidgets('FrostRouterDelegate should handle pop correctly', (
+      WidgetTester tester,
+    ) async {
       delegate.onDidRemovePage();
       expect(delegate.currentConfiguration, '/');
     });
