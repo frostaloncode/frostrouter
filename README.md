@@ -16,10 +16,10 @@
 # Project Details
 
 ![Contributors](https://img.shields.io/github/contributors/frostaloncode/frostrouter)
-![Version](https://img.shields.io/badge/Version-0.9.1-blue)
+![Version](https://img.shields.io/badge/Version-0.9.2-blue)
 [![License: BSD-3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Pub.dev](https://img.shields.io/pub/v/frostrouter.svg)](https://pub.dev/packages/frostrouter)
-[![Dokümantasyonu Görüntüle](https://img.shields.io/badge/Documentation-v0.9.1-brightgreen.svg)](https://pub.dev/documentation/frostrouter/latest/)
+[![Dokümantasyonu Görüntüle](https://img.shields.io/badge/Documentation-v0.9.2-brightgreen.svg)](https://pub.dev/documentation/frostrouter/latest/)
 [![GitHub Wiki](https://img.shields.io/badge/Wiki-Available-blue)](https://github.com/frostaloncode/frostrouter/wiki)
 
 # Introduction
