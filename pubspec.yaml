@@ -1,6 +1,6 @@
 name: frostrouter
 description: "FrostRouter is a library that helps you move from one page to another in Flutter projects. "
-version: 0.9.2
+version: 0.9.3
 homepage: https://github.com/frostaloncode
 repository: https://github.com/frostaloncode/frostrouter
 documentation: https://github.com/frostaloncode/frostrouter/wiki

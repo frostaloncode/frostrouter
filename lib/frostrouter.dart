@@ -47,44 +47,45 @@ class FrostRouter {
   /// _route : a list of page information.
   late RouterConfig<Object> _config;
   late List<FrostRoute> _routers;
+  FrostRouterDelegate _delegate = FrostRouterDelegate([]);
 
   /// Get Functions
   RouterConfig<Object> get config => _config;
   List<FrostRoute> get route => _routers;
+  FrostRouterDelegate get delegate => _delegate;
 
   /// Set Functions
   set setConfig(RouterConfig<Object> newconfig) => _config = newconfig;
   set setRouters(List<FrostRoute> newRoutes) => _routers = newRoutes;
+  set setDelegate(FrostRouterDelegate newdelegate) => _delegate = newdelegate;
 
   /// Functions
   void _starter() {
     /// _starter : This is the function that runs first and sets the variables by assigning them content.
-    _config = FrostRouterConfig.create(_routers);
     final extensionroute = ExtensionRoute();
     extensionroute.setRouter = _routers;
+    _delegate = FrostRouterDelegate(_routers);
+    _config = FrostRouterConfig.create(_delegate);
   }
 
   void frostRoutePath(String path) {
     /// Page access function with Path String value.
-    final delegate = FrostRouterDelegate(_routers);
-    delegate.setNewRoutePath(path);
+    _delegate.setNewRoutePath(path);
   }
 
   void frostRouteReturn() {
     /// It lets you go back to the previous page.
-    final delegate = FrostRouterDelegate(_routers);
-    delegate.setOldRoutePath();
+    _delegate.setOldRoutePath();
   }
 
   void frostRoutePop() {
-    ///It lets you move between pages.
-    final delegate = FrostRouterDelegate(_routers);
-    delegate.onDidRemovePage();
+    ///It takes you back to the "/" (Home) page from the current page.
+    ///If there is a page to return to, it goes back to that page.
+    _delegate.onDidRemovePage();
   }
 
   void frostRouteName(String name) {
     /// The name tag provides the transition between pages.
-    final delegate = FrostRouterDelegate(_routers);
-    delegate.setNewRouteName(name);
+    _delegate.setNewRouteName(name);
   }
 }

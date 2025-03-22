@@ -71,6 +71,7 @@ class FrostRouterDelegate extends RouterDelegate<String>
     if (navigatorKey!.currentState?.canPop() ?? false) {
       navigatorKey!.currentState?.pop();
     } else {
+      /// Eğer stack boşsa, ana sayfaya gider.
       _currentpath = "/";
       notifyListeners();
     }
